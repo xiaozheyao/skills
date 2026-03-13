@@ -73,6 +73,7 @@ environment into a single `.sif` file and avoid all quota and performance issues
 
 ## Conventions Used Across All Skills
 
+- **Test on cluster compute nodes, not locally.** Always run and verify scripts, jobs, and environments on the target cluster's compute nodes — not on your local machine or on login nodes. Local environments differ in OS, filesystem, module systems, schedulers, and available hardware. Login nodes lack GPUs, have restricted resources, and may kill long-running processes. Submit a short test job (e.g. via `srun` or a small `sbatch` script) to validate on an actual compute node before scaling up.
 - **Placeholders** are written in `<ANGLE_BRACKETS>`. Replace them with real values before running.
 - **Environment variables** are UPPER_SNAKE_CASE and should be set in your shell or `.env` before use.
 - **Comments** in shell scripts starting with `# NOTE:` contain important caveats to read before executing.
