@@ -1,13 +1,13 @@
 {
-  "name": "infrastructure-skills",
+  "name": "xzyao-skills",
   "version": "1.0.0",
   "description": "Skills for accessing and operating infrastructure: HPC clusters (Euler, SLURM), storage, databases, and internal services.",
   "author": {
-    "name": "<YOUR_NAME>",
-    "email": "<YOUR_EMAIL>"
+    "name": "Xiazohe Yao",
+    "email": "askxzyao@gmail.com"
   },
-  "homepage": "https://github.com/<YOUR_GITHUB_USERNAME>/skills",
-  "repository": "https://github.com/<YOUR_GITHUB_USERNAME>/skills",
+  "homepage": "https://github.com/xiaozheyao/skills",
+  "repository": "https://github.com/xiaozheyao/skills",
   "license": "MIT",
   "keywords": ["hpc", "slurm", "euler", "infrastructure", "clusters", "storage"]
 }
