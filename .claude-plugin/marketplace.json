@@ -1,0 +1,22 @@
+{
+  "name": "my-skills",
+  "owner": {
+    "name": "<YOUR_NAME>",
+    "email": "<YOUR_EMAIL>"
+  },
+  "metadata": {
+    "description": "Personal infrastructure skills for HPC clusters (Euler, SLURM), storage, databases, and internal services.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "infrastructure-skills",
+      "source": "./",
+      "description": "Skills for accessing and operating infrastructure: HPC clusters (Euler, SLURM), storage, databases, and services.",
+      "author": {
+        "name": "<YOUR_NAME>"
+      },
+      "keywords": ["hpc", "slurm", "euler", "infrastructure", "clusters", "storage"]
+    }
+  ]
+}

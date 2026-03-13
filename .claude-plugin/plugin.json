@@ -1,0 +1,13 @@
+{
+  "name": "infrastructure-skills",
+  "version": "1.0.0",
+  "description": "Skills for accessing and operating infrastructure: HPC clusters (Euler, SLURM), storage, databases, and internal services.",
+  "author": {
+    "name": "<YOUR_NAME>",
+    "email": "<YOUR_EMAIL>"
+  },
+  "homepage": "https://github.com/<YOUR_GITHUB_USERNAME>/skills",
+  "repository": "https://github.com/<YOUR_GITHUB_USERNAME>/skills",
+  "license": "MIT",
+  "keywords": ["hpc", "slurm", "euler", "infrastructure", "clusters", "storage"]
+}

@@ -1,0 +1,51 @@
+# ============================================================
+# skills/.gitignore
+# ============================================================
+
+# ── macOS ────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# ── Windows ──────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── Linux ────────────────────────────────────────────────────
+*~
+
+# ── Editors & IDEs ───────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*.orig
+
+# ── Environment / secrets ────────────────────────────────────
+# Never commit credentials, tokens, or local overrides.
+.env
+.env.*
+secrets/
+*.key
+*.pem
+*.token
+
+# ── Python (if any helper scripts are added) ─────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ── Logs & temp ──────────────────────────────────────────────
+*.log
+tmp/
+.tmp/
+
+# ── Local install artifacts ──────────────────────────────────
+# The install.sh materialises files outside this repo (in ~/.claude/).
+# Nothing it produces should land here, but guard against accidents.
+*.installed
