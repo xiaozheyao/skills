@@ -97,7 +97,7 @@ commands — no cloning required.
 **1. Add the marketplace** (registers the catalog; does not install anything yet):
 
 ```
-/plugin marketplace add <YOUR_GITHUB_USERNAME>/skills
+/plugin marketplace add xiaozheyao/skills
 ```
 
 **2. Install the plugin** (downloads and wires up the skills):
