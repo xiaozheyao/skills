@@ -25,7 +25,7 @@ Start here when you have a task like:
 
 | File | Goal | Clusters / Resources Involved |
 |------|------|-------------------------------|
-| _(none yet)_ | | |
+| [sync-code-to-cluster.md](sync-code-to-cluster.md) | Safely push local source code to a cluster's working dir with `rcc` (no data loss, no secret leak, safe while jobs run) | Any rcc-configured cluster (clariden, bristen, gpu05/07) |
 
 ---
 
