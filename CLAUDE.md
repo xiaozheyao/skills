@@ -25,6 +25,7 @@ Each subdirectory covers a specific cluster technology or named cluster.
 | `clusters/README.md` | Index of all available clusters |
 | `clusters/slurm/` | Generic SLURM-based HPC cluster(s) |
 | `clusters/euler/` | Euler HPC cluster at ETH Zürich (SLURM + **Apptainer/Singularity**) |
+| `clusters/cscs/` | CSCS Alps — Clariden (GH200) / Bristen (A100) (SLURM + **enroot/pyxis** `.sqsh` images); building & operating images |
 
 ### `resources/`
 Shared infrastructure resources that are accessible across clusters or independently.
@@ -63,11 +64,18 @@ install or run software any other way.
 | Cluster | Container runtime | Key skill file |
 |---------|-------------------|----------------|
 | `clusters/euler/` | Apptainer / Singularity (`.sif`) | `clusters/euler/containers.md` |
+| `clusters/cscs/` | enroot + pyxis (`.sqsh` + EDF) | `clusters/cscs/containers.md` |
 
 **On Euler specifically:** When a task requires software not available in the module
 system, default to Apptainer containers — not Conda. Conda creates thousands of small
 files that degrade Lustre filesystem performance. Containers bundle the entire
 environment into a single `.sif` file and avoid all quota and performance issues.
+
+**On CSCS Alps specifically:** containers are **enroot `.sqsh`** images selected by a
+**pyxis EDF** (`srun --environment=<edf>`), not Apptainer. To add/upgrade a pip package,
+prefer the **overlay build** (`enroot create → start --rw + pip → export` to a new `.sqsh`,
+~1 min) over a full podman rebuild (~1.5 h). Compute nodes are diskless — put all
+enroot/podman working paths on `/dev/shm`. See `clusters/cscs/containers.md`.
 
 ---
 

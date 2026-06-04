@@ -36,6 +36,7 @@ Running heavy workloads on login nodes degrades the experience for every user on
 |-----------|------------|-------------|
 | [`slurm/`](slurm/README.md) | SLURM | HPC cluster(s) managed by the SLURM workload manager |
 | [`euler/`](euler/README.md) | SLURM + Apptainer | ETH Zürich's central HPC cluster (Euler); uses Apptainer/Singularity for containers |
+| [`cscs/`](cscs/README.md) | SLURM + enroot/pyxis | CSCS Alps (Clariden GH200 / Bristen A100); `.sqsh` images + EDF profiles; focus on building & operating images |
 
 > Add a new row to this table each time a new cluster is documented.
 
@@ -45,6 +46,7 @@ Running heavy workloads on login nodes degrades the experience for every user on
 
 - Use **SLURM** clusters for batch HPC workloads, GPU training jobs, and large-scale parallel computation.
 - Use **Euler** for ETH Zürich research workloads. Euler runs SLURM but has important differences from a generic cluster: do not specify `--partition`, use Apptainer/Singularity containers for custom software, and be aware of the 15-day Scratch purge policy.
+- Use **CSCS Alps** (`cscs/`) for GH200 (Clariden) / A100 (Bristen) jobs. Runs SLURM but: the account flag is mandatory and per-cluster (`-A infra02` / `-A a-infra02`), containers are **enroot `.sqsh` + pyxis EDF** (no Apptainer), compute nodes are diskless (`/dev/shm` only), and the SSH cert expires daily.
 
 ---
 
